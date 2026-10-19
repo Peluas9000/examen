@@ -5,6 +5,7 @@ import Menu from './Menu'
 import Serie from './Serie'
 import Personaje from './Personaje'
 import CrearPersonaje from './CrearPersonaje'
+import ModificarPersonaje from './ModificarPersonaje'
 export default class Router extends Component {
   render() {
     function SerieElement(){
@@ -23,6 +24,7 @@ export default class Router extends Component {
             <Route path='series/:id' element={<SerieElement/>}/>
             <Route path='personajes/:id' element={<PersonajeElement/>}/>
             <Route path='crearpersonaje' element={<CrearPersonaje/>}/>
+            <Route path='modificarpersonaje' element={<ModificarPersonaje/>}/>
         </Routes>
       </BrowserRouter>
     )

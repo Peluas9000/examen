@@ -74,6 +74,20 @@ export default class Menu extends Component {
               </NavLink>
             </li>
 
+                <li>
+              <NavLink
+                to="/modificarpersonaje"
+                className={({ isActive }) =>
+                  `rounded-lg px-3 py-2.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 sm:px-4 ${
+                    isActive
+                      ? 'bg-white/10 text-cyan-300'
+                      : 'text-slate-300 hover:bg-white/10 hover:text-white'
+                  }`
+                } 
+              >
+                Modificar Personaje
+              </NavLink>
+            </li>
 
             <li className="group relative">
               <button

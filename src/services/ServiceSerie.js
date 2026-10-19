@@ -25,7 +25,17 @@ export default class ServiceSerie {
             });
         }
 
+        //personajes
 
+        getPersonajes(){
+            return new Promise(function(resolve){
+                let request = "/api/Personajes";
+                let url = Global.url + request;
+                axios.get(url).then(res => {
+                    resolve(res.data);
+                });
+            });
+        }
 
         getPersonajesBySerieId(id) {
             return new Promise(function(resolve){
@@ -43,6 +53,16 @@ export default class ServiceSerie {
                 let request = "/api/Personajes";
                 let url = Global.url + request;
                 axios.post(url, personaje).then(res => {
+                    resolve(res.data);
+                });
+            });
+        }
+
+        updatePersonaje(personaje) {
+            return new Promise(function(resolve){
+                let request = "/api/Personajes";
+                let url = Global.url + request;
+                axios.put(url, personaje).then(res => {
                     resolve(res.data);
                 });
             });
